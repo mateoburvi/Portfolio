@@ -4,13 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=375px, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Mateo Burneo's Portfolio</title>
 </head>
 <body>
   <!----------Header----------->
   <header>
-    <nav id="header" ></nav>
+    <nav id="header" class="header" >
       <ul>
         <li class="nav-header">
           <a href="#projects">Portfolio</a>
@@ -22,14 +25,67 @@
           <a href="#contact">Contact</a>
         </li>
       </ul>
+    
+
+      <div id="hamburger">
+        <img src="./assets/button/Icon - Menu.svg">
+        <span class="bar 1"></span>
+        <span class="bar 2"></span>
+        <span class="bar 3"></span>
+      </div>
+    </nav>
     </header>
 
   <!-----------Main Section---------->
-    <section id="main_section">
+    <section id="main">
       <div class="main">
-        <div class="container">
-          <h1>Hey there.<span class="h1_title"><br /></span> I’m Mateo.
-            <span class="h1_sub"><br /></span>I’m a software developer</h1>
+        <div class="main_container">
+          <h1>Hey there.<span class="span_br"><br /></span> I’m Mateo.
+          </h1>
+          <span class="h1_sub">I'm a software developer</span>
+
+          <p>
+            I can help you build a product , feature or website Look through some of my work and experience!
+            <span class="p__br"><br /></span> If you like what you see and have a project you need coded, 
+            <span class="p__br"><br /></span> don’t hesitate to contact me. 
+          </p>
+
+          <div class="social_media">
+            <ul>
+              <li>
+                <a href="https://twitter.com/mateoburvi">
+                  <img src="./assets/icons/twitter.svg"/>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/mateoburvi/">
+                  <img src="./assets/icons/Linkedin icon.svg"/>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./assets/icons/medium.svg"/>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/mateoburvi">
+                  <img src="./assets/icons/github.svg"/>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./assets/icons/angellist.svg"/>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="arrow_button">
+            <a href="#">
+              <img src="./assets/button/Icon - Chevron - Down - Larger.svg">
+            </a>
+          </div>
         </div>
       </div>
 

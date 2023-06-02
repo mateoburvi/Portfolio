@@ -1,0 +1,133 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+body {
+font-family: "Inter", sans-serif;
+font-size: 1.6rem;
+
+}
+
+ .header {
+  width: 100vw;
+  height: 5vh;
+  min-height: 60px;
+  margin: auto;
+  font-size: .8rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: white;
+
+ }
+
+ header ul{
+  display: none;
+ }
+
+ .hamburger {
+  width: 10px;
+  height: 12px;
+  margin-top: 25px;
+  margin-right: 30px;
+  display: flex;
+  align-self: flex-start;
+  flex-direction: column;
+  justify-content: space-around;
+  box-sizing: border-box;
+ }
+
+#main {
+  background-color: white;
+}
+
+ .main {
+  border: 2px;
+  width: 100vw;
+  min-width: none;
+  min-height: 850px;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin:auto;
+  background-image: url("./assets/background/header-illsutration-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+.main_container {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+}
+
+.main h1 {
+  margin-top: 5%;
+  margin-bottom: 0%;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 52px;
+  color: #172B4D;
+}
+
+.main .h1_sub {
+  width: 80%;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 52px;
+  text-align: center;
+  color: #36B37E;
+}
+
+.main p {
+  width: 82%;
+  min-width: 300px;
+  margin-top: 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  text-align: center;
+  color: #172B4D;
+  ;
+}
+
+.p__br {
+  display: none;
+}
+
+.social_media {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.social_media ul {
+  width: 50%;
+  max-width: 220px;
+  padding-left: 0;
+  margin: 5% 0 10% 0;
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+  list-style: none;
+}
+
+.arrow_button {
+  width: 40px;
+  height: 40px;
+  margin: 20% auto 5% auto;
+  border-radius: 50%;
+}
+
+.arrow_button:hover {
+  box-shadow: #DFE1E6 0 0 0 0;
+}
