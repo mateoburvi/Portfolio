@@ -5,14 +5,12 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-
 body {
-font-family: "Inter", sans-serif;
-font-size: 1.6rem;
-
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
 }
 
- .header {
+.header {
   width: 100vw;
   height: 5vh;
   min-height: 60px;
@@ -22,14 +20,13 @@ font-size: 1.6rem;
   align-items: center;
   justify-content: flex-end;
   background-color: white;
-
  }
 
- header ul{
+header ul{
   display: none;
  }
 
- .hamburger {
+.hamburger {
   width: 10px;
   height: 12px;
   margin-top: 25px;
@@ -45,7 +42,7 @@ font-size: 1.6rem;
   background-color: white;
 }
 
- .main {
+.main {
   border: 2px;
   width: 100vw;
   min-width: none;
@@ -60,10 +57,10 @@ font-size: 1.6rem;
   background-position: top center;
 }
 .main_container {
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .main h1 {
