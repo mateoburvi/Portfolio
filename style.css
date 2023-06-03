@@ -1,12 +1,12 @@
 :root {
-  --color-main_theme: #36B37E;
-  --color-second_green: #C5E9DA;
-  --color-white_bg: #EBF0EE;
-  --color-darkblue: #172B4D;
-  --backgroundColor: #FFFFFF;
+  --color-main_theme: #36b37e;
+  --color-second_green: #c5e9da;
+  --color-white_bg: #ebf0ee;
+  --color-darkblue: #172b4d;
+  --backgroundColor: #fff;
   --color-button-hover: rgba(54, 179, 127, 0.24);
   --sections-max-width: 2160px;
-  --wrapper-max-width:1280px;
+  --wrapper-max-width: 1280px;
 }
 
 hr {
@@ -33,6 +33,7 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 1.6rem;
 }
+
 /* ------- Header --------- */
 
 .header {
@@ -52,15 +53,15 @@ header ul {
 }
 
 .burger {
- width: 18px;
- height: 12px;
- margin-top: 25px;
- margin-right: 30px;
- display: flex;
- align-self: flex-start;
- flex-direction: column;
- justify-content: space-around;
- box-sizing: border-box;
+  width: 18px;
+  height: 12px;
+  margin-top: 25px;
+  margin-right: 30px;
+  display: flex;
+  align-self: flex-start;
+  flex-direction: column;
+  justify-content: space-around;
+  box-sizing: border-box;
 }
 
 .burger .bar {
@@ -160,12 +161,11 @@ p,
 }
 
 @media screen and (min-width: 768px) {
-
   header {
     position: relative;
   }
 
-  .header  {
+  .header {
     position: absolute;
     top: 30px;
     left: 50%;
@@ -200,7 +200,7 @@ p,
     background-image: url(assets/background/Header-llustration-desktop.svg);
   }
 
-  .span__br{
+  .span__br {
     display: none;
   }
 
