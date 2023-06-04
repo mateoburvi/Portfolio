@@ -338,7 +338,7 @@ button:active {
 
 .about__title {
   color: var(--color-darkblue);
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
@@ -384,8 +384,8 @@ button:active {
 .about_icon {
   width: 65px;
   height: 65px;
-  left: calc(50% - 80px/2 + 0.5px);
-  top: calc(50% - 80px/2);
+  left: calc(50% - 80px / 2 + 0.5px);
+  top: calc(50% - 80px / 2);
   margin: 40px auto 20px auto;
   border-radius: 50%;
   display: flex;
@@ -420,7 +420,7 @@ button:active {
   border-radius: 8px;
   color: var(--color-main_theme);
   margin: 4px;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   align-items: center;
   font-size: 12px;
