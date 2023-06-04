@@ -310,7 +310,7 @@ button:active {
 .about_me {
   width: 100vw;
   max-width: var(--sections-max-width);
-  margin: 10% auto 0 0;
+  margin: 10% auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
@@ -352,6 +352,7 @@ button:active {
   flex-direction: column;
   background: var(--color-white_bg);
   border: 1px solid var(--colorAboutBackground);
+  margin: 12px;
 }
 
 .about_languages {
@@ -386,9 +387,20 @@ button:active {
 }
 
 .about_cardtags {
-  width: 90%;
+  display: flex;
   justify-content: center;
-  gap: 0px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about_cardtags li {
+  height: 40px;
+  background: var(--backgroundColor);
+  border-radius: 6px;
+  color: var(--colorProjecttext);
+  margin: 8px;
+  padding: 10px 10px 10px 10px;
+  list-style: none;
 }
 
 @media screen and (min-width: 768px) {
