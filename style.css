@@ -1,5 +1,5 @@
 :root {
-  --color-main_theme: #36b37e; 
+  --color-main_theme: #36b37e;
   --color-second_green: #c5e9da;
   --color-white_bg: #ebf0ee;
   --color-darkblue: #172b4d;
@@ -349,22 +349,23 @@ button:active {
   padding: 0;
 }
 
-.about_wrapper  {
+.about_wrapper {
   margin-top: 60px;
 }
 
 .about__list {
   list-style: none;
 }
+
 .about_me_container {
   box-sizing: border-box;
   position: relative;
   height: 316px;
   width: 327px;
   left: 0;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
+  right: 0;
+  top: 0;
+  bottom: 0;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
