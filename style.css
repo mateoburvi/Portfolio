@@ -389,8 +389,8 @@ button:active {
 .about_cardtags {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
+  align-content: flex-start;
 }
 
 .about_cardtags li {
