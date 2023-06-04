@@ -4,6 +4,9 @@
   --color-white_bg: #ebf0ee;
   --color-darkblue: #172b4d;
   --backgroundColor: #fff;
+  --colorAboutBackground: #c1c7d0;
+  --colorProjecttext: #3a4a42;
+  --colorButtonPressed: #008552;
   --color-button-hover: rgba(54, 179, 127, 0.24);
   --sections-max-width: 2160px;
   --wrapper-max-width: 1280px;
@@ -149,6 +152,24 @@ p,
   list-style: none;
 }
 
+button, 
+button a {
+  max-height: 48px;
+  padding: 0 5%;
+  margin: 0 12px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  color: var(--backgroundColor);
+  cursor: pointer;
+}
+
+.about_button a {
+  padding: 0;
+}
+
 .arrow_button {
   width: 40px;
   height: 40px;
@@ -158,6 +179,216 @@ p,
 
 .arrow_button:hover {
   box-shadow: var(--color-button-hover) 0 0 0 0;
+}
+
+/* -------Projects----------- */
+
+.projects {
+  width: 100vw;
+  max-width: var(--sections-max-width);
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--backgroundColor);
+}
+
+.project_title {
+  max-width: 463px;
+  margin: 8% auto 4% auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 5.2rem;
+  color: var(--colorProjecttext);
+  text-align: center;
+}
+
+.projects_h2_icon {
+  width: 48px;
+  margin: 0 auto 10% auto;
+  border-radius: 24px;
+  height: 5px;
+  background-color: var(--color-main_theme);
+}
+
+.project_wrapper {
+  width: 100vw;
+  max-width: var(--wrapper-max-width);
+  margin-bottom: 30px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(327px, 1fr));
+  row-gap: 32px;
+}
+
+.project_card {
+  width: 327px;
+  height: 474px;
+  position: relative;
+  background: var(--color-white_bg);
+  border: 1px solid var(--colorAboutBackground);
+  border-radius: 8px;
+}
+
+.project_card_wrapper {
+  width: 327px;
+  height: 222px;
+  position: absolute;
+  left: calc(50% -327px / 2);
+  bottom: -1px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background: var(--backgroundColor);
+  border-left: 1px solid var(--colorAboutBackground);
+  border-right: 1px solid var(--colorAboutBackground);
+  border-bottom: 1px solid var(--colorAboutBackground);
+  border-radius: 8px;
+}
+
+h4,
+.project_card_title {
+  width: 100%;
+  height: 48px;
+  margin: 0 0 16px 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  text-align: center;
+  color: var(--colorProjecttext);
+}
+.project_card_tags {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 8px 0;
+  list-style: none;
+  float: left;
+}
+.project_card_tags li {
+  width: auto;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 12px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  text-align: center;
+  color: var(--colorProjecttext);
+  background: var(--color-white_bg);
+  border-radius: 4px;
+}
+
+button,
+.project_card_button {
+  width: autopx;
+  height: 48px;
+  border-style: none;
+  margin-top: 8px;
+  background: var(--color-main_theme);
+  border-radius: 4px;
+}
+
+button:hover {
+  box-shadow: 0 8px 16px var(--color-button-hover);
+}
+
+button:active {
+  background: var(--colorButtonPressed);
+}
+
+/* --------- About Me ----------- */
+
+.about_me {
+  width: 100vw;
+  max-width: var(--sections-max-width);
+  margin: 10% auto 0 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--backgroundColor);
+}
+
+.about_container {
+  width: 100vw;
+  max-width: var(--sections-max-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-around;
+  justify-content: center;
+  background-image: 
+    url(./assets/background/illustration\ 2-about\ me\ mobile.svg),
+    url(./assets/background/illustration\ 1-\ about\ me-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 17%, 17%;
+  background-position: bottom left, top right;
+}
+
+.about_button {
+  margin: 5% auto 0 auto;
+  padding: 0;
+}
+
+.about_wrapper {
+  margin-top: 60px;
+}
+
+.about_me_container {
+  box-sizing: border-box;
+  height: 316px;
+  width: 327px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white_bg);
+  border: 1px solid var(--colorAboutBackground);
+}
+
+.about_languages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about_icon {
+  height: 80px;
+  width: 80px;
+  margin: 40px auto 20px auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--backgroundColor);
+  box-shadow: 0 16px 24px rgba(37, 47, 137, 0.08);
+}
+
+.about_title {
+  width: 100%;
+  height: 48px;
+  margin: 0 0 10px 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  text-align: center;
+  color: var(--colorProjecttext);
+}
+
+.about_cardtags {
+  width: 90%;
+  justify-content: center;
+  gap: 0px;
 }
 
 @media screen and (min-width: 768px) {
@@ -215,4 +446,22 @@ p,
     margin: 5% auto 5% auto;
     border-radius: 50%;
   }
+
+  .project_wrapper {
+    width: 95vw;
+  }
+
+  .project_h2_icon {
+    display: none;
+  }
+
+  .about_description {
+    width: 60vw;
+  }
+
+  .skills {
+    grid-area: 2/1/3/3;
+  }
+
+
 }
