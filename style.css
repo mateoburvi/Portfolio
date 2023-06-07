@@ -430,7 +430,42 @@ button:active {
   list-style: none;
 }
 
+/* ------------Contact Section--------------- */
+
+.contact {
+  background-color: var(--backgroundColor);
+  max-width: var(--sections-max-width);
+  margin: 4% auto 0 auto;
+  background-image: url("./assets/background/illustration-contact-form.svg");
+  background-repeat: no-repeat;
+  background-size: 12%;
+  background-position: bottom right;
+}
+
+.contact__container {
+  width: 327px;
+  margin: auto;
+  padding: 0 2%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 24px;
+}
+
+.contact__container h2 {
+  height: 363px;
+  margin-bottom: 5%;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: var(--color-darkblue);
+}
+
 @media screen and (min-width: 768px) {
+  
   header {
     position: relative;
   }
