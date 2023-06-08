@@ -443,25 +443,71 @@ button:active {
 }
 
 .contact__container {
-  width: 327px;
   margin: auto;
-  padding: 0 2%;
+  width: 375px;
+  height: 879px;
+  padding: 64px 24px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 58px;
+}
+
+/* Pegar el numero 1 aqui */
+
+.contact__form {
+  margin: auto;
+  gap: 24px;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  gap: 24px;
+  justify-content: space-around;
+  width: 327px;
 }
 
-.contact__container h2 {
-  height: 363px;
-  margin-bottom: 5%;
-  text-align: center;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 52px;
-  color: var(--color-darkblue);
+.contact__form ul {
+  list-style: none;
+}
+
+.contact__form__element {
+  margin: 24px;
+  width: 327px;
+}
+
+button[type="submit"] {
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+/* Pegar el numero 2 aqui  */
+
+
+/* Pegar el numero 3 aqui  */
+
+label {
+  display: none;
+}
+
+.contact__container__email {
+  margin-bottom: 8%;
+}
+
+.footer {
+  max-width: var(--sections-max-width);
+  height: 72px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__social__media ul {
+  margin: 0;
+  padding-top: 29px;
 }
 
 @media screen and (min-width: 768px) {

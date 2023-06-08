@@ -13,7 +13,9 @@
 </head>
 
 <body>
+
   <!----------Header----------->
+
   <header>
     <nav id="header" class="header">
       <ul>
@@ -247,12 +249,12 @@
         <h2>I'm always interested in hearing about new projects, 
           so if you'd like to chat please get in touch.</h2>
 
-          <form class="contact__form" action="#" method="post">
+          <form class="contact__form" action="https://formspree.io/f/mlekyabq" method="post">
             <ul>
               
               <li class="contact__form__element fullname" >
                 <label for="fullname">Full name</label>
-                <input type="text" id="fullname" placeholder="Full name" required/>
+                <input type="text" id="fullname" placeholder="Full name" maxlength="30" required/>
               </li>
 
               <li class="contact__form__element email" >
@@ -266,6 +268,7 @@
                   id="text" 
                   name="text"  
                   placeholder="Hey I’d like to connect to..."
+                  maxlength="500"
                   required
                 ></textarea>
               </li>
@@ -280,9 +283,12 @@
     </div>
   </section>
 
+  <!--------------------Footer Section------------------>
+
+  
   <footer>
     <div class="footer">
-      <div class="social_media__footer">
+      <div class="social_media footer__social__media">
         <ul>
           <li>
             <a href="https://twitter.com/mateoburvi">
