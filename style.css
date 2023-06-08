@@ -430,6 +430,118 @@ button:active {
   list-style: none;
 }
 
+/* ------------Contact Section--------------- */
+
+.contact {
+  background-color: var(--backgroundColor);
+  max-width: var(--sections-max-width);
+  margin: 4% auto 0 auto;
+  background-image: url("./assets/background/illustration-contact-form.svg");
+  background-repeat: no-repeat;
+  background-size: 12%;
+  background-position: bottom right;
+}
+
+.contact__container {
+  margin: auto;
+  width: 375px;
+  height: 879px;
+  padding: 64px 24px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 58px;
+}
+
+.contact__container h2 {
+  margin-bottom: 5%;
+  width: 327px;
+  height: 363px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  color: var(--color-darkblue);
+}
+
+.contact__form {
+  margin: auto;
+  gap: 24px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 327px;
+}
+
+.contact__form ul {
+  list-style: none;
+}
+
+.contact__form__element {
+  margin: 24px;
+  width: 327px;
+}
+
+button[type="submit"] {
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  height: 48px;
+  padding-left: 16px;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  border-radius: 4px;
+  border: 1px solid #d0d9d4;
+  resize: none;
+}
+
+textarea {
+  width: 100%;
+  height: 114px;
+  padding: 12px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  border-radius: 4px;
+  border: 1px solid var(--color-main_theme);
+  resize: none;
+}
+
+label {
+  display: none;
+}
+
+.contact__container__email {
+  margin-bottom: 8%;
+}
+
+.footer {
+  max-width: var(--sections-max-width);
+  height: 72px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__social__media ul {
+  margin: 0;
+  padding-top: 29px;
+}
+
 @media screen and (min-width: 768px) {
   header {
     position: relative;
