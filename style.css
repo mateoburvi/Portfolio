@@ -454,7 +454,18 @@ button:active {
   gap: 58px;
 }
 
-/* Pegar el numero 1 aqui */
+.contact__container h2 {
+  margin-bottom: 5%;
+  width: 327px;
+  height: 363px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  color: var(--color-darkblue);
+}
 
 .contact__form {
   margin: auto;
