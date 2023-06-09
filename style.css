@@ -22,6 +22,7 @@ html {
   font-size: 62.5%;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -615,7 +616,7 @@ label {
   }
 
   .about_description {
-    width: 60vw;
+    width: 64vw;
   }
 
   .skills {
