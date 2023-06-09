@@ -586,6 +586,10 @@ label {
     display: none;
   }
 
+  .projects_h2_icon {
+    display: none;
+  }
+
   p,
   .main p {
     width: 85%;
@@ -593,8 +597,12 @@ label {
     margin-top: 10%;
   }
 
+  .social_media ul {
+    margin-bottom: 5%;
+  }
+
   .arrow_button {
-    margin: 5% auto 5% auto;
+    margin: 0 auto 5% auto;
     border-radius: 50%;
   }
 
