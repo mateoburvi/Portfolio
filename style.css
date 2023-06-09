@@ -88,7 +88,7 @@ header ul {
   background-image: url("./assets/background/header-illsutration-mobile.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position:  top;
+  background-position: top;
 }
 
 .main_container {
@@ -584,7 +584,9 @@ label {
   }
 
   .main p {
-    margin-top: 0;
+    width: 85%;
+    max-width: 768px;
+    margin-top: 1%;
   }
 
   .span__br {
@@ -593,13 +595,6 @@ label {
 
   .projects_h2_icon {
     display: none;
-  }
-
-  p,
-  .main p {
-    width: 85%;
-    max-width: 768px;
-    margin-top: 1%;
   }
 
   .social_media ul {
@@ -624,15 +619,15 @@ label {
   }
 
   .about_container {
-    background-image: 
+    background-image:
       url(./assets/background/illustration-about-me-2-desktop.svg),
       url(./assets/background/illustration\ 1\ about\ me\ desktop.svg);
-    background-size: 15%,85%;
+    background-size: 15%, 85%;
   }
-  
+
   .about__list {
     display: flex;
-    flex-basis: 28,3333%;
+    flex-basis: 28, 3333%;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -660,6 +655,4 @@ label {
   .contact__container__email {
     display: none;
   }
-
-
 }
