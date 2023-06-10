@@ -640,7 +640,7 @@ label {
 
   .contact {
     width: 100vw;
-    background-image: 
+    background-image:
       url("./assets/background/Left-contact-form-image.svg"),
       url("./assets/background/Left-center-contact-form-image.svg"),
       url("./assets/background/Right-contact-form-image.svg");
@@ -656,7 +656,7 @@ label {
     align-items: center;
     justify-content: space-around;
   }
-  
+
   .contact__form ul {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
