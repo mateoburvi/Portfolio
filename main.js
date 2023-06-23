@@ -5,7 +5,7 @@ const burger = document.querySelector('#burger');
 let showMenu = false;
 
 function toggleMenu() {
-  if (!showMenu && viewportWidth < 600) {
+  if (!showMenu && viewportWidth < 768) {
     header.classList.remove('header');
     header.classList.add('header-active');
     burger.classList.remove('burger');

@@ -4,7 +4,7 @@
   --color-white_bg: #ebf0ee;
   --color-darkblue: #172b4d;
   --backgroundColor: #fff;
-  --colorMenutext: #3A4A42;
+  --colorMenutext: #3a4a42;
   --colorAboutBackground: #c1c7d0;
   --colorProjecttext: #344563;
   --colorButtonPressed: #008552;
@@ -84,6 +84,25 @@ header ul {
   display: flex;
   justify-content: flex-end;
   background: var(--backgroundColor);
+}
+
+button,
+button a {
+  max-height: 48px;
+  padding: 0 5%;
+  margin: 0 12px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  color: var(--backgroundColor);
+  cursor: pointer;
+  transition: scale 100ms linear;
+}
+
+.about_button a {
+  padding: 0;
 }
 
 .header-active ul {
@@ -211,25 +230,6 @@ p,
   justify-content: space-between;
   align-items: baseline;
   list-style: none;
-}
-
-button,
-button a {
-  max-height: 48px;
-  padding: 0 5%;
-  margin: 0 12px;
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 24px;
-  color: var(--backgroundColor);
-  cursor: pointer;
-  transition: scale 100ms linear;
-}
-
-.about_button a {
-  padding: 0;
 }
 
 .arrow_button {
