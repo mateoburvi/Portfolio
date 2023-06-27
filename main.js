@@ -19,7 +19,7 @@ function toggleMenu() {
     header.classList.add('header');
     burger.classList.remove('burger-active');
     burger.classList.add('burger');
-    document.body.style.overflowY = 'auto';
+    document.body.style.overflowY = 'scroll';
 
     // Set menu state
     showMenu = false;

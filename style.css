@@ -13,11 +13,6 @@
   --wrapper-max-width: 1280px;
 }
 
-hr {
-  box-sizing: content-box;
-  height: 0;
-}
-
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -77,14 +72,7 @@ header ul {
 
 /* ------------ Header Burger - Active ------------ */
 
-.header-active {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  display: flex;
-  justify-content: flex-end;
-  background: var(--backgroundColor);
-}
+
 
 button,
 button a {
@@ -105,16 +93,6 @@ button a {
   padding: 0;
 }
 
-.header-active ul {
-  height: 250px;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-top: 70px;
-  padding-left: 10%;
-  list-style: none;
-}
 
 .header-active li a {
   font-weight: 600;
@@ -124,18 +102,7 @@ button a {
   color: var(--colorMenutext);
 }
 
-.burger-active {
-  width: 18px;
-  height: 18px;
-  margin-top: 25px;
-  margin-right: 30px;
-  align-self: flex-start;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  box-sizing: border-box;
-  cursor: pointer;
-}
+
 
 .burger-active .top {
   border-radius: 20px;
