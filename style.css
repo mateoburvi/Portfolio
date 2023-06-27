@@ -100,6 +100,16 @@ button a {
   padding: 0;
 }
 
+.header-active ul {
+  height: 250px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 70px;
+  padding-left: 10%;
+  list-style: none;
+}
 
 .header-active li a {
   font-weight: 600;
