@@ -72,7 +72,14 @@ header ul {
 
 /* ------------ Header Burger - Active ------------ */
 
-
+.header-active {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  background: var(--backgroundColor);
+}
 
 button,
 button a {
