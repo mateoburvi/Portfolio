@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+
 const viewportWidth = window.innerWidth;
 const header = document.querySelector('#header');
 const burger = document.querySelector('#burger');
@@ -19,7 +21,7 @@ function toggleMenu() {
     header.classList.add('header');
     burger.classList.remove('burger-active');
     burger.classList.add('burger');
-    document.body.style.overflowY = 'auto';
+    document.body.style.overflowY = 'visible';
 
     // Set menu state
     showMenu = false;

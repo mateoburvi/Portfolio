@@ -13,11 +13,6 @@
   --wrapper-max-width: 1280px;
 }
 
-hr {
-  box-sizing: content-box;
-  height: 0;
-}
-
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -80,7 +75,7 @@ header ul {
 .header-active {
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: flex-end;
   background: var(--backgroundColor);
