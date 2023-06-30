@@ -510,7 +510,7 @@ button:active {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  gap: 58px;
+  /* gap: 58px; */
 }
 
 .contact__container h2 {
@@ -709,6 +709,7 @@ label {
   .contact__container {
     width: auto;
     margin: auto;
+    margin-left: 1.5rem;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
