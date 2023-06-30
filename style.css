@@ -282,7 +282,7 @@ p,
 
 .project_card {
   width: 327px;
-  height: 474px;
+  height: 450px;
   position: relative;
   background: var(--color-white_bg);
   border: 1px solid var(--colorAboutBackground);
@@ -322,11 +322,10 @@ h4,
 .project_card_tags {
   width: 100%;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: space-around;
   gap: 8px 0;
   list-style: none;
-  float: left;
 }
 
 .project_card_tags li {
@@ -344,6 +343,11 @@ h4,
   color: var(--colorProjecttext);
   background: var(--color-white_bg);
   border-radius: 4px;
+}
+
+.project_image {
+  display: block;
+  margin: 0 auto;
 }
 
 button,
