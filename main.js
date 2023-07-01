@@ -36,7 +36,7 @@ const projectsArray = [
     name: 'Keeping track of hundreds of components',
     imgMobile: './assets/Popup_images/Snapshoot Portfolio.svg',
     imgDesktop: './assets/Popup_images/container-snapshoot-portfolio.svg',
-    techtags: [
+    techTags: [
       'Codekit',
       'GitHub',
       'JavaScript',
@@ -50,7 +50,6 @@ const projectsArray = [
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
-    imgMobile: './assets/img/cardMobile.jpg',
     imgDesktop: './assets/Popup_images/Img Plaholder Desktop.png',
     techTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
     liveLink: 'https://example.com/project1',
@@ -59,7 +58,6 @@ const projectsArray = [
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
-    imgMobile: './assets/img/cardMobile.jpg',
     imgDesktop: './assets/Popup_images/Img Plaholder Desktop.png',
     techTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
     liveLink: 'https://example.com/project1',
@@ -68,7 +66,6 @@ const projectsArray = [
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
-    imgMobile: './assets/img/cardMobile.jpg',
     imgDesktop: './assets/Popup_images/Img Plaholder Desktop.png',
     techTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
     liveLink: 'https://example.com/project1',
@@ -77,7 +74,6 @@ const projectsArray = [
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
-    imgMobile: './assets/img/cardMobile.jpg',
     imgDesktop: './assets/Popup_images/Img Plaholder Desktop.png',
     techTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
     liveLink: 'https://example.com/project1',
@@ -86,7 +82,7 @@ const projectsArray = [
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
-    imgMobile: './assets/img/cardMobile.jpg',
+    imgMobile: './assets/Popup_images/Img Plaholder Mobile.svg',
     imgDesktop: './assets/Popup_images/Img Plaholder Desktop.png',
     techTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
     liveLink: 'https://example.com/project1',
@@ -120,9 +116,9 @@ for (let i = 0; i < projectsArray.length; i += 1) {
   projectCardTags.classList.add('project_card_tags');
   projectCardWrapper.appendChild(projectCardTags);
 
-  for (let j = 0; j < projectsArray[i].techtags.length; j++) {
+  for (let j = 0; j < projectsArray[i].techTags.length; j++) {
     const projectCardTag = document.createElement('li');
-    projectCardTag.innerText = projectsArray[i].techtags[j];
+    projectCardTag.innerText = projectsArray[i].techTags[j];
     projectCardTags.appendChild(projectCardTag);
   }
 
@@ -142,8 +138,8 @@ function createPopup(index) {
   const projectWrapper = document.getElementsByClassName('project_wrapper')[0];
 
   const popupWindow = document.createDocument('div');
-  popupWindow.setAttribute('id', 'popup_window');
-  popupWindow.classList.add('popup_window');
+  popupWindow.setAttribute('id', 'popup__window');
+  popupWindow.classList.add('popup__window');
 
   const popupContent = document.createElement('div');
   popupContent.classList.add('popup_content');
@@ -249,7 +245,7 @@ function createPopup(index) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const projectCardButtons = document.querySelectorAll('.project__card__button');
+  const projectCardButtons = document.querySelectorAll('.project_card_button');
 
   for (let i = 0; i < projectCardButtons.length; i += 1) {
     ((index) => {
@@ -261,3 +257,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })(i);
   }
 });
+
+// Form Validation //
+
