@@ -82,7 +82,6 @@ const projectsArray = [
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
-    imgMobile: './assets/Popup_images/Img Plaholder Mobile.svg',
     imgDesktop: './assets/Popup_images/Img Plaholder Desktop.png',
     techTags: ['Ruby on Rails', 'CSS', 'JavaScript', 'HTML'],
     liveLink: 'https://example.com/project1',
@@ -137,7 +136,7 @@ function createPopup(index) {
   const project = projectsArray[index];
   const projectWrapper = document.getElementsByClassName('project_wrapper')[0];
 
-  const popupWindow = document.createDocument('div');
+  const popupWindow = document.createElement('div');
   popupWindow.setAttribute('id', 'popup__window');
   popupWindow.classList.add('popup__window');
 
@@ -169,7 +168,7 @@ function createPopup(index) {
   const popupSource = document.createElement('source');
   popupSource.setAttribute('media', '(min-width: 768px)');
   popupSource.setAttribute('srcset', project.imgDesktop);
-  popupSource.appendChild(popupSource);
+  popupWindow.appendChild(popupSource);
 
   const popupImage = document.createElement('img');
   popupImage.setAttribute('src', project.imgMobile);
