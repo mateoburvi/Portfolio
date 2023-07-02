@@ -514,6 +514,7 @@ button:active {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+
   /* gap: 58px; */
 }
 
