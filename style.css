@@ -468,6 +468,22 @@ button:active {
   width: 100%;
 }
 
+.about_cardtags li {
+  height: 40px;
+  background: var(--backgroundColor);
+  border-radius: 8px;
+  color: var(--color-main_theme);
+  margin: 4px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  padding: 12px;
+  list-style: none;
+}
+
 #popup__card__tags li {
   margin-right: 8px;
   padding: 0 10px;
@@ -531,6 +547,7 @@ button:active {
   width: 18px;
   margin-left: 1rem;
 }
+
 /* --------- About Me ----------- */
 
 .about_me {
@@ -638,21 +655,7 @@ button:active {
   align-content: flex-start;
 }
 
-.about_cardtags li {
-  height: 40px;
-  background: var(--backgroundColor);
-  border-radius: 8px;
-  color: var(--color-main_theme);
-  margin: 4px;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  align-items: center;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 600;
-  padding: 12px;
-  list-style: none;
-}
+
 
 /* ------------Contact Section--------------- */
 
@@ -676,6 +679,7 @@ button:active {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+
   /* gap: 58px; */
 }
 
@@ -942,65 +946,10 @@ label {
   }
 }
 
-  .about_description {
-    width: 68vw;
-  }
+.about_description {
+  width: 68vw;
+}
 
-  .about_container {
-    background-image:
-      url(./assets/background/illustration-about-me-2-desktop.svg),
-      url(./assets/background/illustration\ 1\ about\ me\ desktop.svg);
-    background-size: 15%, 85%;
-  }
-
-  .about__list {
-    display: flex;
-    flex-basis: 28.3333%;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .skills {
-    grid-area: 2/1/3/3;
-  }
-
-  .contact {
-    width: 100vw;
-    background-image:
-      url("./assets/background/Left-contact-form-image.svg"),
-      url("./assets/background/Left-center-contact-form-image.svg"),
-      url("./assets/background/Right-contact-form-image.svg");
-    background-repeat: no-repeat;
-    background-size: 12%, 12%, 12%;
-    background-position: bottom left, bottom left 19%, bottom right;
-  }
-
-  .contact__container {
-    width: auto;
-    margin: auto;
-    margin-left: 1.5rem;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .contact__form ul {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "name lastname"
-      "email email"
-      "message message"
-      "button__form button__form";
-    gap: 24px;
-    list-style: none;
-  }
-
-  button[type="submit"] {
-    justify-content: flex-start;
-    margin: 0 auto 15% 0;
-  }
-
-  .contact__container__email {
-    display: none;
-  }
+.skills {
+  grid-area: 2/1/3/3;
 }
