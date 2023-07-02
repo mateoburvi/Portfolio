@@ -352,7 +352,7 @@ h4,
 
 button,
 .project_card_button {
-  width: autopx;
+  width: auto;
   height: 48px;
   border-style: none;
   margin-top: 8px;
@@ -881,18 +881,20 @@ label {
   }
 
   .popup__buttons__container {
+    width: 100%;
+    grid-area: tags;
     flex-flow: row wrap;
     justify-content: flex-end;
     align-self: center;
-    margin-top: 0.5rem;
+    margin-top: 2.5rem;
   }
 
   #popup__live__link__button {
-    flex-basis: 70%;
+    /* flex-basis: 70%; */
   }
 
   #popup__source__link__button {
-    flex-basis: 70%;
+    /* flex-basis: 70%; */
   }
 
   /* POPUP ENDS */
