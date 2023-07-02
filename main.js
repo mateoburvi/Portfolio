@@ -36,7 +36,7 @@ const projectsArray = [
     name: 'Keeping track of hundreds of components',
     imgMobile: './assets/Popup_images/Snapshoot Portfolio.svg',
     imgDesktop: './assets/Popup_images/container-snapshoot-portfolio.svg',
-    techTags: [
+    techtags: [
       'Codekit',
       'GitHub',
       'JavaScript',
@@ -266,7 +266,7 @@ for (let i = 0; i < projectsArray.length; i += 1) {
   projectCardTags.classList.add('project_card_tags');
   projectCardWrapper.appendChild(projectCardTags);
 
-  for (let j = 0; j < projectsArray[i].techtags.length; j++) {
+  for (let j = 0; j < projectsArray[i].techtags.length; j += 1) {
     const projectCardTag = document.createElement('li');
     projectCardTag.innerText = projectsArray[i].techtags[j];
     projectCardTags.appendChild(projectCardTag);
@@ -283,20 +283,45 @@ for (let i = 0; i < projectsArray.length; i += 1) {
   projectCardButton.addEventListener('click', () => createPopup(i));
 }
 
-// Pop-up Window //
-
-/*document.addEventListener('DOMContentLoaded', () => {
-  const projectCardButtons = document.querySelectorAll('.project_card_button');
-  console.log(projectCardButtons);
-
-  for (let i = 0; i < projectCardButtons.length; i += 1) {
-      projectCardButtons[i].addEventListener('click', () => {
-        createPopup(i);
-        const popupWindow = document.getElementsByClassName('popup__window')[0];
-        popupWindow.style.display = 'block';
-      });
-  }
-});*/
-
 // Form Validation //
 
+const fullName = document.getElementById('fullname');
+const email = document.getElementById('email');
+
+fullName.removeAttribute('required');
+
+function errorMessage() {
+  const errorWindow = document.createElement('div');
+  errorWindow.setAttribute('id', 'error-window');
+  const errorMsg = document.createElement('div');
+  errorMsg.setAttribute('id', 'error-message');
+  errorMsg.setAttribute('class', 'error-message');
+  const errorMsgText = document.createTextNode(
+    'Your email should have only lowercase letters',
+  );
+  errorMsg.appendChild(errorMsgText);
+  errorWindow.appendChild(errorMsg);
+  email.after(errorWindow);
+}
+
+email.addEventListener('input', () => {
+  const emailValue = email.value;
+  const contactForm = document.getElementsByClassName('contact__form')[0];
+  const emailError = document.getElementById('error-message');
+  if (emailValue !== emailValue.toLowerCase()) {
+    if (contactForm.contains(emailError) === false) {
+      errorMessage();
+    }
+  } else if (document.body.contains(emailError) === true) {
+    emailError.remove();
+  }
+});
+
+document
+  .getElementsByClassName('contact__form')[0]
+  .addEventListener('submit', (event) => {
+    const emailValue = document.getElementById('email').value;
+    if (emailValue !== emailValue.toLowerCase()) {
+      event.preventDefault();
+    }
+  });
