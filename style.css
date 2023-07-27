@@ -881,20 +881,13 @@ label {
   }
 
   .popup__buttons__container {
-    width: 100%;
-    grid-area: tags;
+    width: auto;
+    grid-area: buttons;
     flex-flow: row wrap;
     justify-content: flex-end;
+    align-items:flex-start;
     align-self: center;
     margin-top: 2.5rem;
-  }
-
-  #popup__live__link__button {
-    /* flex-basis: 70%; */
-  }
-
-  #popup__source__link__button {
-    /* flex-basis: 70%; */
   }
 
   /* POPUP ENDS */
