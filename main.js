@@ -34,7 +34,7 @@ burger.addEventListener('click', toggleMenu);
 const projectsArray = [
   {
     name: 'Keeping track of hundreds of components',
-    imgMobile: './assets/Popup_images/Snapshoot Portfolio.svg',
+    imgMobile: './assets/Popup_images/Snapshoot Portfolio-mobile.png',
     imgDesktop: './assets/Popup_images/container-snapshoot-portfolio.svg',
     techTags: [
       'Codekit',
@@ -50,7 +50,7 @@ const projectsArray = [
   },
   {
     name: 'Keeping track of hundreds of components',
-    imgMobile: './assets/Popup_images/Snapshoot Portfolio.svg',
+    imgMobile: './assets/Popup_images/Snapshoot Portfolio-mobile.png',
     imgDesktop: './assets/Popup_images/container-snapshoot-portfolio.svg',
     techTags: [
       'Codekit',
@@ -66,7 +66,7 @@ const projectsArray = [
   },
   {
     name: 'Keeping track of hundreds of components',
-    imgMobile: './assets/Popup_images/Snapshoot Portfolio.svg',
+    imgMobile: './assets/Popup_images/Snapshoot Portfolio-mobile.png',
     imgDesktop: './assets/Popup_images/container-snapshoot-portfolio.svg',
     techTags: [
       'Codekit',
@@ -82,7 +82,7 @@ const projectsArray = [
   },
   {
     name: 'Keeping track of hundreds of components',
-    imgMobile: './assets/Popup_images/Snapshoot Portfolio.svg',
+    imgMobile: './assets/Popup_images/Snapshoot Portfolio-mobile.png',
     imgDesktop: './assets/Popup_images/container-snapshoot-portfolio.svg',
     techTags: [
       'Codekit',
@@ -98,7 +98,7 @@ const projectsArray = [
   },
   {
     name: 'Keeping track of hundreds of components',
-    imgMobile: './assets/Popup_images/Snapshoot Portfolio.svg',
+    imgMobile: './assets/Popup_images/Snapshoot Portfolio-mobile.png',
     imgDesktop: './assets/Popup_images/container-snapshoot-portfolio.svg',
     techTags: [
       'Codekit',
@@ -114,7 +114,7 @@ const projectsArray = [
   },
   {
     name: 'Keeping track of hundreds of components',
-    imgMobile: './assets/Popup_images/Snapshoot Portfolio.svg',
+    imgMobile: './assets/Popup_images/Snapshoot Portfolio-mobile.png',
     imgDesktop: './assets/Popup_images/container-snapshoot-portfolio.svg',
     techTags: [
       'Codekit',

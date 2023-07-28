@@ -398,7 +398,7 @@ button:active {
   z-index: 200;
 }
 
-.popup-content__wrapper {
+.popup-content_wrapper {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -426,9 +426,9 @@ button:active {
   position: absolute;
   width: 20px;
   height: 2px;
-  background-color: var(--color-darkblue);
-  top: 50%;
-  left: 50%;
+  background-color: var(--backgroundColor);
+  top: 45%;
+  left: 55%;
   transform: translate(-50%, -50%);
 }
 
@@ -864,12 +864,12 @@ label {
 
   #popup__close__button {
     grid-area: close;
-    justify-self: end;
+    justify-self:start;
     margin: 0 0 1rem 0;
     background: #ebecf0;
     mix-blend-mode: multiply;
     border-radius: 8px;
-    position: relative;
+    position: absolute;
   }
 
   #popup__close__button .bar {
@@ -881,7 +881,7 @@ label {
     grid-area: buttons;
     flex-flow: row wrap;
     justify-content: flex-end;
-    align-items:flex-start;
+    align-items: flex-start;
     align-self: center;
     margin-top: 2.5rem;
   }
@@ -917,11 +917,6 @@ label {
 
   .name {
     grid-area: name;
-    display: block;
-  }
-
-  .lastname {
-    grid-area: lastname;
     display: block;
   }
 
