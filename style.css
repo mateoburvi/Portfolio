@@ -352,8 +352,8 @@ h4,
 
 button,
 .project_card_button {
-  width: autopx;
-  height: 48px;
+  width: auto;
+  height: 4.6rem;
   border-style: none;
   margin-top: 8px;
   background: var(--color-main_theme);
@@ -367,6 +367,183 @@ button:hover {
 
 button:active {
   background: var(--colorButtonPressed);
+}
+
+/* ----- POPUP CREATION ----- */
+
+.popup__window {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(var(--neutrals-n-50, 193, 199, 208), 0.5);
+  background-blend-mode: multiply;
+  z-index: 100;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.popup_content {
+  padding: 1.6rem;
+  width: 90%;
+  max-width: 920px;
+  max-height: 1083px;
+  margin: 5% auto 2% auto;
+  background: #fff;
+  border: 1px solid #ebecf0;
+  box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+  border-radius: 8px;
+  z-index: 200;
+}
+
+.popup-content_wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "img"
+    "title"
+    "tags"
+    "description"
+    "buttons";
+  justify-content: center;
+  align-items: center;
+}
+
+#popup__close__button {
+  grid-area: 1/1/2/2;
+  align-self: start;
+  justify-self: end;
+  margin: 1rem;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+}
+
+#popup__close__button .bar {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: var(--backgroundColor);
+  top: 45%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+#popup__close__button .bar:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#popup__close__button .bar:last-child {
+  transform: translate(-50%, -50%) rotate(315deg);
+}
+
+.popup__picture {
+  grid-area: img;
+}
+
+.popup__picture img {
+  width: 100%;
+  max-width: 910px;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.popup__title {
+  grid-area: title;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 4.4rem;
+  text-align: left;
+  color: #172b4d;
+  margin: 2rem 0;
+}
+
+#popup__card__tags {
+  grid-area: tags;
+  justify-content: left;
+  width: 100%;
+}
+
+.about_cardtags li {
+  height: 40px;
+  background: var(--backgroundColor);
+  border-radius: 8px;
+  color: var(--color-main_theme);
+  margin: 4px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  padding: 12px;
+  list-style: none;
+}
+
+#popup__card__tags li {
+  margin-right: 8px;
+  padding: 0 10px;
+}
+
+#popup__card__tags li:nth-child(n + 4) {
+  display: none;
+}
+
+.popup__description {
+  grid-area: description;
+  width: 100%;
+  min-width: 0;
+  margin: 2rem 0 1rem 0;
+  text-align: justify;
+  line-height: 140%;
+  font-size: 100%;
+}
+
+.popup__buttons__container {
+  grid-area: buttons;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: start;
+  margin-top: 1vh;
+  gap: 12px 18px;
+  width: 100%;
+  height: 70%;
+}
+
+#popup__live__link__button {
+  margin: 0;
+  font-size: 100%;
+  padding: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.6rem;
+}
+
+#popup__live__link__button img {
+  width: 18px;
+  margin-left: 1rem;
+  justify-content: center;
+}
+
+#popup__source__link__button {
+  margin: 0;
+  font-size: 100%;
+  padding: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6rem;
+}
+
+#popup__source__link__button img {
+  width: 18px;
+  margin-left: 1rem;
 }
 
 /* --------- About Me ----------- */
@@ -474,22 +651,6 @@ button:active {
   justify-content: center;
   flex-wrap: wrap;
   align-content: flex-start;
-}
-
-.about_cardtags li {
-  height: 40px;
-  background: var(--backgroundColor);
-  border-radius: 8px;
-  color: var(--color-main_theme);
-  margin: 4px;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  align-items: center;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 600;
-  padding: 12px;
-  list-style: none;
 }
 
 /* ------------Contact Section--------------- */
@@ -653,10 +814,6 @@ label {
     margin-top: 1%;
   }
 
-  .span__br2 {
-    display: none;
-  }
-
   .projects_h2_icon {
     display: none;
   }
@@ -678,46 +835,67 @@ label {
     display: none;
   }
 
-  .about_description {
-    width: 68vw;
+  /* POPUP STARTS */
+
+  .popup-content {
+    padding: 0;
   }
 
-  .about_container {
-    background-image:
-      url(./assets/background/illustration-about-me-2-desktop.svg),
-      url(./assets/background/illustration\ 1\ about\ me\ desktop.svg);
-    background-size: 15%, 85%;
+  .popup-content_wrapper {
+    grid-template-columns: auto;
+    grid-template-areas:
+      "..  close"
+      "img  img"
+      "title buttons"
+      "tags  tags"
+      "description description";
+    padding: 2rem 20px;
   }
 
-  .about__list {
+  #popup__card__tags li:nth-child(n + 4) {
     display: flex;
-    flex-basis: 28.3333%;
-    flex-wrap: wrap;
-    justify-content: center;
+  }
+
+  .popup__description {
+    max-width: 100%;
+  }
+
+  #popup__close__button {
+    grid-area: close;
+    justify-self: end;
+    margin: 0 0 1rem 0;
+    background: #ebecf0;
+    mix-blend-mode: multiply;
+    border-radius: 8px;
+    position: relative;
+  }
+
+  #popup__close__button .bar {
+    background-color: #67798e;
+  }
+
+  .popup__buttons__container {
+    width: auto;
+    grid-area: buttons;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    align-self: center;
+    margin-top: 2.5rem;
+  }
+
+  /* POPUP ENDS */
+
+  .about-me__description {
+    width: 68vw;
   }
 
   .skills {
     grid-area: 2/1/3/3;
   }
 
-  .contact {
-    width: 100vw;
-    background-image:
-      url("./assets/background/Left-contact-form-image.svg"),
-      url("./assets/background/Left-center-contact-form-image.svg"),
-      url("./assets/background/Right-contact-form-image.svg");
-    background-repeat: no-repeat;
-    background-size: 12%, 12%, 12%;
-    background-position: bottom left, bottom left 19%, bottom right;
-  }
-
-  .contact__container {
-    width: auto;
-    margin: auto;
-    margin-left: 1.5rem;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+  .contact__container h2 {
+    margin: 3% 0;
   }
 
   .contact__form ul {
@@ -731,6 +909,15 @@ label {
     list-style: none;
   }
 
+  .full-name {
+    display: none;
+  }
+
+  .name {
+    grid-area: name;
+    display: block;
+  }
+
   button[type="submit"] {
     justify-content: flex-start;
     margin: 0 auto 15% 0;
@@ -739,4 +926,12 @@ label {
   .contact__container__email {
     display: none;
   }
+}
+
+.about_description {
+  width: 68vw;
+}
+
+.skills {
+  grid-area: 2/1/3/3;
 }

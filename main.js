@@ -34,9 +34,9 @@ burger.addEventListener('click', toggleMenu);
 const projectsArray = [
   {
     name: 'Keeping track of hundreds of components',
-    imgMobile: './assets/Popup_images/Snapshoot Portfolio.svg',
+    imgMobile: './assets/Popup_images/Snapshoot Portfolio-mobile.png',
     imgDesktop: './assets/Popup_images/container-snapshoot-portfolio.svg',
-    techtags: [
+    techTags: [
       'Codekit',
       'GitHub',
       'JavaScript',
@@ -50,9 +50,9 @@ const projectsArray = [
   },
   {
     name: 'Keeping track of hundreds of components',
-    imgMobile: './assets/Popup_images/Snapshoot Portfolio.svg',
+    imgMobile: './assets/Popup_images/Snapshoot Portfolio-mobile.png',
     imgDesktop: './assets/Popup_images/container-snapshoot-portfolio.svg',
-    techtags: [
+    techTags: [
       'Codekit',
       'GitHub',
       'JavaScript',
@@ -66,9 +66,9 @@ const projectsArray = [
   },
   {
     name: 'Keeping track of hundreds of components',
-    imgMobile: './assets/Popup_images/Snapshoot Portfolio.svg',
+    imgMobile: './assets/Popup_images/Snapshoot Portfolio-mobile.png',
     imgDesktop: './assets/Popup_images/container-snapshoot-portfolio.svg',
-    techtags: [
+    techTags: [
       'Codekit',
       'GitHub',
       'JavaScript',
@@ -82,9 +82,9 @@ const projectsArray = [
   },
   {
     name: 'Keeping track of hundreds of components',
-    imgMobile: './assets/Popup_images/Snapshoot Portfolio.svg',
+    imgMobile: './assets/Popup_images/Snapshoot Portfolio-mobile.png',
     imgDesktop: './assets/Popup_images/container-snapshoot-portfolio.svg',
-    techtags: [
+    techTags: [
       'Codekit',
       'GitHub',
       'JavaScript',
@@ -98,9 +98,9 @@ const projectsArray = [
   },
   {
     name: 'Keeping track of hundreds of components',
-    imgMobile: './assets/Popup_images/Snapshoot Portfolio.svg',
+    imgMobile: './assets/Popup_images/Snapshoot Portfolio-mobile.png',
     imgDesktop: './assets/Popup_images/container-snapshoot-portfolio.svg',
-    techtags: [
+    techTags: [
       'Codekit',
       'GitHub',
       'JavaScript',
@@ -114,9 +114,9 @@ const projectsArray = [
   },
   {
     name: 'Keeping track of hundreds of components',
-    imgMobile: './assets/Popup_images/Snapshoot Portfolio.svg',
+    imgMobile: './assets/Popup_images/Snapshoot Portfolio-mobile.png',
     imgDesktop: './assets/Popup_images/container-snapshoot-portfolio.svg',
-    techtags: [
+    techTags: [
       'Codekit',
       'GitHub',
       'JavaScript',
@@ -130,13 +130,56 @@ const projectsArray = [
   },
 ];
 
+for (let i = 0; i < projectsArray.length; i += 1) {
+  const projectWrapper = document.getElementsByClassName('project_wrapper')[0];
+
+  const projectCard = document.createElement('article');
+  projectCard.classList.add('project_card', `card${i}`);
+
+  const projectCardImage = document.createElement('img');
+  projectCardImage.classList.add('project_image');
+  projectCardImage.setAttribute('src', projectsArray[i].imgMobile);
+  projectCardImage.setAttribute('alt', projectsArray[i].name);
+  projectCard.appendChild(projectCardImage);
+
+  const projectCardWrapper = document.createElement('div');
+  projectCardWrapper.classList.add('project_card_wrapper');
+  projectCard.appendChild(projectCardWrapper);
+
+  const projectCardTitle = document.createElement('h4');
+  projectCardTitle.classList.add('project_card_title');
+  projectCardTitle.innerHTML = projectsArray[i].name;
+  projectCardWrapper.appendChild(projectCardTitle);
+
+  const projectCardTags = document.createElement('ul');
+  projectCardTags.classList.add('project_card_tags');
+  projectCardWrapper.appendChild(projectCardTags);
+
+  for (let j = 0; j < projectsArray[i].techTags.length; j += 1) {
+    const projectCardTag = document.createElement('li');
+    projectCardTag.innerHTML = projectsArray[i].techTags[j];
+    projectCardTags.appendChild(projectCardTag);
+  }
+
+  const projectCardButton = document.createElement('button');
+  projectCardButton.classList.add('project_card_button');
+  projectCardButton.setAttribute('type', 'button');
+  projectCardButton.innerText = 'See Project';
+
+  projectCardWrapper.appendChild(projectCardButton);
+
+  projectWrapper.appendChild(projectCard);
+}
+
+// Pop-up Window //
+
 function createPopup(index) {
   const project = projectsArray[index];
   const projectWrapper = document.getElementsByClassName('project_wrapper')[0];
 
   const popupWindow = document.createElement('div');
-  popupWindow.setAttribute('id', 'popup_window');
-  popupWindow.classList.add('popup_window');
+  popupWindow.setAttribute('id', 'popup__window');
+  popupWindow.classList.add('popup__window');
 
   const popupContent = document.createElement('div');
   popupContent.classList.add('popup_content');
@@ -166,7 +209,7 @@ function createPopup(index) {
   const popupSource = document.createElement('source');
   popupSource.setAttribute('media', '(min-width: 768px)');
   popupSource.setAttribute('srcset', project.imgDesktop);
-  popupWindow.appendChild(popupSource);
+  popupPicture.appendChild(popupSource);
 
   const popupImage = document.createElement('img');
   popupImage.setAttribute('src', project.imgMobile);
@@ -180,12 +223,12 @@ function createPopup(index) {
 
   const popupCardTags = document.createElement('ul');
   popupCardTags.setAttribute('id', 'popup__card__tags');
-  popupCardTags.classList.add('project__card__tags');
+  popupCardTags.classList.add('project_card_tags');
   popupContentWrapper.appendChild(popupCardTags);
 
-  for (let j = 0; j < project.techtags.length; j += 1) {
+  for (let j = 0; j < project.techTags.length; j += 1) {
     const popupCardTag = document.createElement('li');
-    popupCardTag.innerHTML = project.techtags[j];
+    popupCardTag.innerHTML = project.techTags[j];
     popupCardTags.appendChild(popupCardTag);
   }
 
@@ -241,87 +284,18 @@ function createPopup(index) {
   });
 }
 
-for (let i = 0; i < projectsArray.length; i += 1) {
-  const projectWrapper = document.getElementsByClassName('project_wrapper')[0];
+document.addEventListener('DOMContentLoaded', () => {
+  const projectCardButtons = document.querySelectorAll('.project_card_button');
 
-  const projectCard = document.createElement('article');
-  projectCard.classList.add('project_card', `card${i}`);
-
-  const projectCardImage = document.createElement('img');
-  projectCardImage.classList.add('project_image');
-  projectCardImage.setAttribute('src', projectsArray[i].imgMobile);
-  projectCardImage.setAttribute('alt', projectsArray[i].name);
-  projectCard.appendChild(projectCardImage);
-
-  const projectCardWrapper = document.createElement('div');
-  projectCardWrapper.classList.add('project_card_wrapper');
-  projectCard.appendChild(projectCardWrapper);
-
-  const projectCardTitle = document.createElement('h4');
-  projectCardTitle.classList.add('project_card_title');
-  projectCardTitle.innerText = projectsArray[i].name;
-  projectCardWrapper.appendChild(projectCardTitle);
-
-  const projectCardTags = document.createElement('ul');
-  projectCardTags.classList.add('project_card_tags');
-  projectCardWrapper.appendChild(projectCardTags);
-
-  for (let j = 0; j < projectsArray[i].techtags.length; j += 1) {
-    const projectCardTag = document.createElement('li');
-    projectCardTag.innerText = projectsArray[i].techtags[j];
-    projectCardTags.appendChild(projectCardTag);
-  }
-
-  const projectCardButton = document.createElement('button');
-  projectCardButton.classList.add('project_card_button');
-  projectCardButton.setAttribute('type', 'button');
-  projectCardButton.innerText = 'See Project';
-  projectCardWrapper.appendChild(projectCardButton);
-
-  projectWrapper.appendChild(projectCard);
-
-  projectCardButton.addEventListener('click', () => createPopup(i));
-}
-
-// Form Validation //
-
-const fullName = document.getElementById('fullname');
-const email = document.getElementById('email');
-
-fullName.removeAttribute('required');
-
-function errorMessage() {
-  const errorWindow = document.createElement('div');
-  errorWindow.setAttribute('id', 'error-window');
-  const errorMsg = document.createElement('div');
-  errorMsg.setAttribute('id', 'error-message');
-  errorMsg.setAttribute('class', 'error-message');
-  const errorMsgText = document.createTextNode(
-    'Your email should have only lowercase letters',
-  );
-  errorMsg.appendChild(errorMsgText);
-  errorWindow.appendChild(errorMsg);
-  email.after(errorWindow);
-}
-
-email.addEventListener('input', () => {
-  const emailValue = email.value;
-  const contactForm = document.getElementsByClassName('contact__form')[0];
-  const emailError = document.getElementById('error-message');
-  if (emailValue !== emailValue.toLowerCase()) {
-    if (contactForm.contains(emailError) === false) {
-      errorMessage();
-    }
-  } else if (document.body.contains(emailError) === true) {
-    emailError.remove();
+  for (let i = 0; i < projectCardButtons.length; i += 1) {
+    ((index) => {
+      projectCardButtons[index].addEventListener('click', () => {
+        createPopup(index);
+        const popupWindow = document.getElementsByClassName('popup__window')[index];
+        popupWindow.style.display = 'block';
+      });
+    })(i);
   }
 });
 
-document
-  .getElementsByClassName('contact__form')[0]
-  .addEventListener('submit', (event) => {
-    const emailValue = document.getElementById('email').value;
-    if (emailValue !== emailValue.toLowerCase()) {
-      event.preventDefault();
-    }
-  });
+// Form Validation //
