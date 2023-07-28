@@ -843,7 +843,7 @@ label {
     padding: 0;
   }
 
-  .popup-content__wrapper {
+  .popup-content_wrapper {
     grid-template-columns: auto;
     grid-template-areas:
       "..  close"
@@ -864,12 +864,12 @@ label {
 
   #popup__close__button {
     grid-area: close;
-    justify-self:start;
+    justify-self: end;
     margin: 0 0 1rem 0;
     background: #ebecf0;
     mix-blend-mode: multiply;
     border-radius: 8px;
-    position: absolute;
+    position: relative;
   }
 
   #popup__close__button .bar {
@@ -879,7 +879,7 @@ label {
   .popup__buttons__container {
     width: auto;
     grid-area: buttons;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: flex-start;
     align-self: center;

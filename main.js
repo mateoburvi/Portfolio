@@ -209,7 +209,7 @@ function createPopup(index) {
   const popupSource = document.createElement('source');
   popupSource.setAttribute('media', '(min-width: 768px)');
   popupSource.setAttribute('srcset', project.imgDesktop);
-  popupWindow.appendChild(popupSource);
+  popupPicture.appendChild(popupSource);
 
   const popupImage = document.createElement('img');
   popupImage.setAttribute('src', project.imgMobile);
