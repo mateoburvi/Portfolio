@@ -383,7 +383,6 @@ button:active {
   z-index: 100;
   overflow-y: auto;
   overflow-x: hidden;
-
 }
 
 .popup_content {
@@ -457,7 +456,7 @@ button:active {
   font-style: normal;
   font-weight: 700;
   font-size: 3.2rem;
-  line-height:  4.4rem;
+  line-height: 4.4rem;
   text-align: left;
   color: #172b4d;
   margin: 2rem 0;
