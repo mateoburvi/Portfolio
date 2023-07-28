@@ -299,3 +299,30 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Form Validation //
+
+/* ------- SAVE INPUT VALUES TO LOCAL STORAGE -------*/
+const contactForm = document.getElementsByClassName('contact__form')[0];
+contactForm.addEventListener('submit', () => {
+  const fullNameValue = document.getElementById('fullname').value;
+  const emailValue = document.getElementById('email').value;
+  const messageValue = document.getElementById('message').value;
+  localStorage.setItem('fullName', fullNameValue);
+  localStorage.setItem('email', emailValue);
+  localStorage.setItem('message', messageValue);
+});
+
+/* ------- GET INPUT VALUES FROM LOCAL STORAGE -------*/
+window.addEventListener('load', () => {
+  const fullNameValue = localStorage.getItem('fullName');
+  const emailValue = localStorage.getItem('email');
+  const messageValue = localStorage.getItem('message');
+
+  if (fullNameValue !== null) {
+    document.getElementById('fullname').value = fullNameValue;
+  } else {
+    document.getElementById('fullname').value = '';
+  }
+
+  document.getElementById('email').value = emailValue;
+  document.getElementById('message').value = messageValue;
+});
