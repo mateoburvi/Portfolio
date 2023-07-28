@@ -301,28 +301,39 @@ document.addEventListener('DOMContentLoaded', () => {
 // Form Validation //
 
 /* ------- SAVE INPUT VALUES TO LOCAL STORAGE -------*/
-const contactForm = document.getElementsByClassName('contact__form')[0];
-contactForm.addEventListener('submit', () => {
-  const fullNameValue = document.getElementById('fullname').value;
-  const emailValue = document.getElementById('email').value;
-  const messageValue = document.getElementById('message').value;
-  localStorage.setItem('fullName', fullNameValue);
-  localStorage.setItem('email', emailValue);
-  localStorage.setItem('message', messageValue);
-});
+const contactForm = document.querySelector('.contact__form');
+
+const saveFormData = () => {
+  const formData = {
+    fullName: document.getElementById('fullname').value,
+    email: document.getElementById('email').value,
+    message: document.getElementById('message').value,
+  };
+
+  localStorage.setItem('formData', JSON.stringify(formData));
+};
 
 /* ------- GET INPUT VALUES FROM LOCAL STORAGE -------*/
-window.addEventListener('load', () => {
-  const fullNameValue = localStorage.getItem('fullName');
-  const emailValue = localStorage.getItem('email');
-  const messageValue = localStorage.getItem('message');
+const loadFormData = () => {
+  const storedFormData = localStorage.getItem('formData');
 
-  if (fullNameValue !== null) {
-    document.getElementById('fullname').value = fullNameValue;
-  } else {
-    document.getElementById('fullname').value = '';
+  if (storedFormData !== null) {
+    const formData = JSON.parse(storedFormData);
+    document.getElementById('fullname').value = formData.fullName;
+    document.getElementById('email').value = formData.email;
+    document.getElementById('message').value = formData.message;
   }
+};
 
-  document.getElementById('email').value = emailValue;
-  document.getElementById('message').value = messageValue;
+/* ------- SAVE DATA ON SUBMIT -------*/
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  saveFormData();
+});
+
+/* ------- LOAD DATA ON PAGE LOAD -------*/
+
+window.addEventListener('load', () => {
+  loadFormData();
 });
