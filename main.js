@@ -299,3 +299,41 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Form Validation //
+
+/* ------- SAVE INPUT VALUES TO LOCAL STORAGE -------*/
+const contactForm = document.querySelector('.contact__form');
+
+const saveFormData = () => {
+  const formData = {
+    fullName: document.getElementById('fullname').value,
+    email: document.getElementById('email').value,
+    message: document.getElementById('message').value,
+  };
+
+  localStorage.setItem('formData', JSON.stringify(formData));
+};
+
+/* ------- GET INPUT VALUES FROM LOCAL STORAGE -------*/
+const loadFormData = () => {
+  const storedFormData = localStorage.getItem('formData');
+
+  if (storedFormData !== null) {
+    const formData = JSON.parse(storedFormData);
+    document.getElementById('fullname').value = formData.fullName;
+    document.getElementById('email').value = formData.email;
+    document.getElementById('text').value = formData.message;
+  }
+};
+
+/* ------- SAVE DATA ON CHANGE STATUS -------*/
+
+contactForm.addEventListener('change', (e) => {
+  e.preventDefault();
+  saveFormData();
+});
+
+/* ------- LOAD DATA ON PAGE LOAD -------*/
+
+window.addEventListener('load', () => {
+  loadFormData();
+});
