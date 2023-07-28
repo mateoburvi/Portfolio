@@ -321,13 +321,13 @@ const loadFormData = () => {
     const formData = JSON.parse(storedFormData);
     document.getElementById('fullname').value = formData.fullName;
     document.getElementById('email').value = formData.email;
-    document.getElementById('message').value = formData.message;
+    document.getElementById('text').value = formData.message;
   }
 };
 
-/* ------- SAVE DATA ON SUBMIT -------*/
+/* ------- SAVE DATA ON CHANGE STATUS -------*/
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('change', (e) => {
   e.preventDefault();
   saveFormData();
 });
